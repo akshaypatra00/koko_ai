@@ -1,0 +1,14 @@
+{
+  "name": "koko-backend",
+  "version": "1.0.0",
+  "description": "Koko AI multi-model AI orchestration backend",
+  "type": "module",
+  "main": "../server/src/server.js",
+  "scripts": {
+    "dev": "nodemon ../server/src/server.js",
+    "start": "node ../server/src/server.js",
+    "test": "node ../server/test/test-endpoints.js"
+  },
+  "author": "Akshay",
+  "license": "ISC"
+}

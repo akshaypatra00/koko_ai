@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Koko AI - Media Enhancer & Clean Exporter",
+  "version": "1.0.0",
+  "description": "Client-side browser tool for Koko AI and frontier models: clean canvas export, media enhancer, and watermark removal for Gemini images and videos.",
+  "permissions": ["activeTab", "storage", "downloads"],
+  "host_permissions": [
+    "*://localhost/*",
+    "*://127.0.0.1/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Koko Media Enhancer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://localhost/*", "*://127.0.0.1/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
